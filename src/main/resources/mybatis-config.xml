@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//OTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- 1.?????? -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://192.168.10.101:3306/user" />
+                <property name="username" value="root" />
+                <property name="password" value="123456" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- ?????? -->
+    <mappers>
+<!--        <mapper resource="cn/mybatis/test/Emp.xml" />-->
+<!--        <mapper class="cn.mybatis.test.Emp" />-->
+        <mapper resource="/Users/myasmacbookpro/IdeaProjects/mybatis/src/main/java/cn/mybatis/test/Emp.xml" />
+    </mappers>
+
+</configuration>
